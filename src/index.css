@@ -1,0 +1,22 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen for root */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Body global styles only */
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: #f3f4f6; /* same as your HTML */
+  color: #1f2937;
+  /* REMOVE flex from body */
+  margin: 0;
+  padding: 0;
+}
