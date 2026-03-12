@@ -1,0 +1,151 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #d1d5db;
+  --rating-color: #f59e0b;
+  --transition-speed: 0.3s;
+}
+
+/* ===== Page Wrapper ===== */
+.view-page {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: var(--text-main);
+  padding: 0; /* প্যাডিং ০ করা হয়েছে যাতে হেডার কোণায় যেতে পারে */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Full Screen Header (Fixed to Corners) ===== */
+.site-header {
+  width: 100%;
+  position: relative; /* ADD THIS */
+  padding: 40px 50px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* লেখা বাম দিক থেকে শুরু হবে */
+  max-width: 60%;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* ===== Navigation Button (Top Right) ===== */
+.nav-link {
+  padding: 12px 24px;
+  align-self: auto;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap; 
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.2);
+  top: 40px;
+  right: 50px;
+  position: absolute;
+}
+
+.nav-link:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.3);
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  
+  background: transparent !important; 
+  box-shadow: none !important; 
+  border: none !important; 
+}
+
+
+.feedback-card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.feedback-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.feedback-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.feedback-card strong {
+  font-weight: 600;
+  color: #374151;
+}
+
+.rating {
+  font-weight: 700;
+  color: var(--rating-color);
+}
+
+
+.no-feedback {
+  margin-top: 40px;
+  font-size: 18px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-link {
+    align-self: flex-start; 
+  }
+}
